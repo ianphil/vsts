@@ -20,3 +20,5 @@
 vsts
 debug
 
+# Secrets
+secrets.json
