@@ -1,9 +1,9 @@
 package main
 
 import (
-	"vsts/args"
-	"vsts/models/user"
-	"vsts/utils/comms"
+	"github.com/tripdubroot/vsts/args"
+	"github.com/tripdubroot/vsts/models/user"
+	"github.com/tripdubroot/vsts/utils/comms"
 )
 
 func main() {

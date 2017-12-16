@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 
-	u "vsts/models/user"
+	u "github.com/tripdubroot/vsts/models/user"
 )
 
 // PostRequest is an exported type

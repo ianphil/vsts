@@ -2,7 +2,8 @@ package args
 
 import (
 	"os"
-	"vsts/utils/logger"
+
+	"github.com/tripdubroot/vsts/utils/logger"
 )
 
 // validateBuildArg parses the build command
