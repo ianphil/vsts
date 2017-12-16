@@ -2,13 +2,10 @@ package main
 
 import (
 	"github.com/tripdubroot/vsts/args"
-	"github.com/tripdubroot/vsts/models/user"
-	"github.com/tripdubroot/vsts/utils/comms"
+	"github.com/tripdubroot/vsts/commands"
 )
 
 func main() {
-	args.ValidateArgs()
-
-	usr := user.User{ID: "Ian", Balance: 8}
-	comms.PostRequest(usr)
+	commandToExecute := args.ValidateArgs()
+	commands.Exec(commandToExecute)
 }

@@ -1,13 +1,7 @@
 package args
 
-import (
-	"os"
-
-	"github.com/tripdubroot/vsts/utils/logger"
-)
-
 // validateReleaseArg parses the release command
-func validateReleaseArg(args []string) {
-	logger.LogMessage("release arg")
-	os.Exit(0)
+func validateReleaseArg(args []string) string {
+	// TODO: need to implement validateReleaseArg
+	return args[1] + " arg"
 }

@@ -1,13 +1,7 @@
 package args
 
-import (
-	"os"
-
-	"github.com/tripdubroot/vsts/utils/logger"
-)
-
 // validateBuildArg parses the build command
-func validateBuildArg(args []string) {
-	logger.LogMessage("Build arg")
-	os.Exit(0)
+func validateBuildArg(args []string) string {
+	// TODO: need to implement
+	return args[1] + " arg"
 }

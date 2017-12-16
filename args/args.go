@@ -7,8 +7,9 @@ import (
 )
 
 // ValidateArgs is an exported function
-func ValidateArgs() {
+func ValidateArgs() string {
 	var firstArg string
+	var result string
 
 	if len(os.Args) >= 2 {
 		firstArg = os.Args[1]
@@ -18,9 +19,9 @@ func ValidateArgs() {
 
 	switch {
 	case firstArg == "build":
-		validateBuildArg(os.Args)
+		result = validateBuildArg(os.Args)
 	case firstArg == "release":
-		validateReleaseArg(os.Args)
+		result = validateReleaseArg(os.Args)
 	case firstArg == "empty" || firstArg == "-h" || firstArg == "--help":
 		printDefaultHelp()
 	default:
@@ -28,7 +29,5 @@ func ValidateArgs() {
 		os.Exit(1)
 	}
 
-	// if len(args) == 1 || args[1] == "-h" || args[1] == "--help" {
-	// 	printDefaultHelp()
-	// }
+	return result
 }
