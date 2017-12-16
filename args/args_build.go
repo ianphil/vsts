@@ -7,6 +7,6 @@ import (
 
 // validateBuildArg parses the build command
 func validateBuildArg(args []string) {
-	logger.LogMessage("Build param")
+	logger.LogMessage("Build arg")
 	os.Exit(0)
 }
