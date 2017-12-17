@@ -1,7 +1,7 @@
 package args
 
-// validateBuildArg parses the build command
-func validateBuildArg(args []string) string {
+// parseBuildArg parses the build command
+func parseBuildArg(args []string) string {
 	// TODO: need to implement
 	return args[1] + " arg"
 }
