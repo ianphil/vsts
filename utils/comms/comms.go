@@ -8,9 +8,9 @@ import (
 )
 
 // GetRequest gets data
-func GetRequest() string {
+func GetRequest(uri string) string {
 	client := &http.Client{}
-	req, _ := http.NewRequest("GET", "https://cseblack.visualstudio.com/DefaultCollection/_apis/projects?api-version=3.0", nil)
+	req, _ := http.NewRequest("GET", uri, nil)
 	req.Header.Set("Authorization", "Basic "+auth.GetTokenFromPAT())
 	res, _ := client.Do(req)
 
