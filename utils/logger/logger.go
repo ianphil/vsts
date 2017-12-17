@@ -2,7 +2,11 @@ package logger
 
 import "fmt"
 
-// LogMessage is an exported function
-func LogMessage(msg string) {
+// Stdout is an exported function
+func Stdout(msg string) {
 	fmt.Println(msg)
+}
+
+func Stderr(msg string) {
+	fmt.Println("ERROR: " + msg)
 }
