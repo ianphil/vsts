@@ -1,4 +1,4 @@
-package args
+package commands
 
 const (
 	// DefaultErrorText - displayed when invalide commands are passed

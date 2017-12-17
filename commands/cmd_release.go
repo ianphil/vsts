@@ -1,4 +1,4 @@
-package args
+package commands
 
 // parseReleaseArg parses the release command
 func parseReleaseArg(args []string) string {

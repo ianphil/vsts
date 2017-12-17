@@ -1,4 +1,4 @@
-package args
+package commands
 
 func parseProjectArg(args []string) string {
 	// TODO: need to implement

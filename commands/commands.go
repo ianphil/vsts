@@ -1,16 +1,29 @@
-package args
+package commands
 
 import (
 	"os"
+	"fmt"
 
 	"github.com/tripdubroot/vsts/commands"
 	"github.com/tripdubroot/vsts/utils/logger"
 )
 
+// // Exec executes the command passed by args
+// func Exec(cmd string) {
+// 	// var result models.ProjectList
+// 	// result = execListProjects(cmd)
+
+// 	// for i := 1; i < result.Count; i++ {
+// 	// 	fmt.Println(result.Value[i].Name)
+// 	// }
+
+// 	fmt.Println(cmd)
+// }
+
 var firstArg string
 
 // ParseArgs is an exported function
-func ParseArgs() string {
+func ParseAndExecute() {
 	var result string
 
 	setFirstArg()

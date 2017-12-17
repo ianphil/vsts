@@ -1,4 +1,4 @@
-package args
+package commands
 
 // parseBuildArg parses the build command
 func parseBuildArg(args []string) string {
