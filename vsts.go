@@ -4,14 +4,14 @@ import (
 	"fmt"
 
 	"github.com/tripdubroot/vsts/args"
-	"github.com/tripdubroot/vsts/auth"
 	"github.com/tripdubroot/vsts/commands"
+	"github.com/tripdubroot/vsts/utils/comms"
 )
 
 func main() {
-	auth := auth.GetTokenFromPAT()
+	result := comms.GetRequest()
 
-	fmt.Println(auth)
+	fmt.Println(result)
 
 	commandToExecute := args.ValidateArgs()
 	commands.Exec(commandToExecute)
