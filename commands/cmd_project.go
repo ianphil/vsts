@@ -1,6 +1,6 @@
 package commands
 
-func parseProjectArg(args []string) string {
+func parseProjectArg(args []string) {
 	// TODO: need to implement
-	return args[1] + " arg"
+	panic("not implemented")
 }

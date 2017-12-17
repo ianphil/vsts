@@ -1,7 +1,7 @@
 package commands
 
 // parseBuildArg parses the build command
-func parseBuildArg(args []string) string {
+func parseBuildArg(args []string) {
 	// TODO: need to implement
-	return args[1] + " arg"
+	panic("not implemented")
 }
