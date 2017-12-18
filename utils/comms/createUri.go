@@ -3,7 +3,7 @@ package comms
 import "fmt"
 
 const (
-	projectVer = "?api-version=1.0"
+	projectVer string = "?api-version=1.0"
 )
 
 // InstanceURI generates URI host/project

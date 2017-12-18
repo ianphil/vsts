@@ -3,40 +3,42 @@ package commands
 import (
 	"os"
 
+	"github.com/tripdubroot/vsts/commands/builds"
+	"github.com/tripdubroot/vsts/commands/projects"
+	"github.com/tripdubroot/vsts/commands/releases"
 	"github.com/tripdubroot/vsts/utils/logger"
 )
 
-// // Exec executes the command passed by args
-// func Exec(cmd string) {
-// 	// var result models.ProjectList
-// 	// result = execListProjects(cmd)
+const (
+	Project string = "project"
+	Build   string = "build"
+	Release string = "release"
+	Empty   string = "empty"
+	ShHelp  string = "-h"
+	DhHelp  string = "--help"
+)
 
-// 	// for i := 1; i < result.Count; i++ {
-// 	// 	fmt.Println(result.Value[i].Name)
-// 	// }
+var (
+	cmd string
+)
 
-// 	fmt.Println(cmd)
-// }
-
-var firstArg string
-
-// ParseArgs is an exported function
+// ParseAndExecute is an exported function
 func ParseAndExecute() {
-	setFirstArg()
+	setCmd()
 
 	switch {
-	case firstArg == Project:
-		parseProjectArg(os.Args)
+	case cmd == Project:
+		projects.Exec(os.Args)
 
-	case firstArg == Build:
-		parseBuildArg(os.Args)
+	case cmd == Build:
+		builds.Exec(os.Args)
 
-	case firstArg == Release:
-		parseReleaseArg(os.Args)
+	case cmd == Release:
+		releases.Exec(os.Args)
 
-	case firstArg == Empty ||
-		firstArg == ShHelp ||
-		firstArg == DhHelp:
+	case cmd == Empty ||
+		cmd == ShHelp ||
+		cmd == DhHelp:
 		printDefaultHelp()
 
 	default:
@@ -45,10 +47,15 @@ func ParseAndExecute() {
 	}
 }
 
-func setFirstArg() {
+func setCmd() {
 	if len(os.Args) >= 2 {
-		firstArg = os.Args[1]
+		cmd = os.Args[1]
 	} else {
-		firstArg = Empty
+		cmd = Empty
 	}
+}
+
+func printDefaultHelp() {
+	logger.Stdout(DefaultHelpText)
+	os.Exit(0)
 }

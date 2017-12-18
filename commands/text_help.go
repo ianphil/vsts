@@ -1,11 +1,8 @@
 package commands
 
 const (
-	// DefaultErrorText - displayed when invalide commands are passed
-	DefaultErrorText string = "Please supply a valid command, -h, or --help switch"
-
-	// DefaultHelpText - displayed when no commands are passed
-	DefaultHelpText string = `Welcome to the vsts_cli
+	defaultErrorText string = "Please supply a valid command, -h, or --help switch"
+	defaultHelpText  string = `Welcome to the vsts_cli
 
                       $$$$$$$$$$$
        ?????        $$$$$$$$ZZZ$$$
