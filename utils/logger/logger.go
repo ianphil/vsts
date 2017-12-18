@@ -1,6 +1,7 @@
 package logger
 
 import "fmt"
+import "os"
 
 // Stdout is an exported function
 func Stdout(msg string) {
@@ -9,4 +10,5 @@ func Stdout(msg string) {
 
 func Stderr(msg string) {
 	fmt.Println("ERROR: " + msg)
+	os.Exit(1)
 }

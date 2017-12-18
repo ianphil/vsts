@@ -1,7 +1,7 @@
 package main
 
-import "github.com/tripdubroot/vsts/commands"
+import "github.com/tripdubroot/vsts/cmd"
 
 func main() {
-	commands.ParseAndExecute()
+	cmd.Execute()
 }

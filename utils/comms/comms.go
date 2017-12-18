@@ -4,6 +4,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
+	"github.com/tripdubroot/vsts/utils/logger"
+
 	"github.com/tripdubroot/vsts/auth"
 )
 
@@ -21,7 +23,7 @@ func GetRequest(uri string) string {
 		bodyBytes, _ := ioutil.ReadAll(res.Body)
 		body = string(bodyBytes)
 	} else {
-		body = "Didn't work"
+		logger.Stderr("Not Authorized")
 	}
 
 	return body
