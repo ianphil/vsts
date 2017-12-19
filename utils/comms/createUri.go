@@ -4,11 +4,12 @@ import "fmt"
 
 const (
 	projectVer string = "?api-version=1.0"
+	Host       string = "https://%s.visualstudio.com"
 )
 
 // InstanceURI generates URI host/project
 func InstanceURI(instance string) string {
-	uri := fmt.Sprintf("http://%s.visualstudio.com", instance)
+	uri := fmt.Sprintf(Host, instance)
 
 	return uri
 }

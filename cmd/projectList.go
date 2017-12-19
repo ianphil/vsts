@@ -2,11 +2,11 @@ package cmd
 
 import (
 	"encoding/json"
+	"fmt"
 
 	"github.com/spf13/cobra"
 	"github.com/tripdubroot/vsts/models"
 	"github.com/tripdubroot/vsts/utils/comms"
-	"github.com/tripdubroot/vsts/utils/logger"
 )
 
 var instance string
@@ -26,7 +26,15 @@ var projectListCmd = &cobra.Command{
 			panic(err)
 		}
 
-		logger.Stdout("Project Name: " + projList.Value[0].Name)
+		fmt.Println(" ")
+		fmt.Printf(" %-45s| %-20s\n", "ID", "Name")
+		fmt.Println("------------------------------------------------------------------")
+
+		for i := 0; i < projList.Count; i++ {
+			fmt.Printf(" %-45s  %-20s\n", projList.Value[i].ID, projList.Value[i].Name)
+		}
+
+		fmt.Println(" ")
 	},
 }
 
