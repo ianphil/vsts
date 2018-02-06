@@ -7,7 +7,7 @@ import (
 )
 
 // Create env var by:
-// export VSTS_PAT=":your vsts PAT"
+// export VSTS_PAT="your vsts PAT"
 func TestGetTokenFromPat(t *testing.T) {
 	result := auth.GetTokenFromPAT()
 	if result == "" {
